@@ -30,6 +30,11 @@ we can use the command
 when the option moveintodir is specified, the program will step inside of (lets say ./gallery-dl/pornhub/model1/) before executing the command: yt-dlp -f best --restrict-filenames https://www.pornhub.com/model/model1
 
 
+
+
+
+
+
 help text:
 usage: multi-dir gallery-dl syncer thingy [-h] -u URLPREFIX
                                           [--notrailingslash]
