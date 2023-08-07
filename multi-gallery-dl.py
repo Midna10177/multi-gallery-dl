@@ -12,8 +12,8 @@ parser = argparse.ArgumentParser(
   gallery-dl will be ran on each directory as such: "gallery-dl --sleep 2 --sleep-request 2 URL_PREFIX+DIRECTORY+URL_POSTFIX
   
   EXAMPLES:
-   ./program_name twitter/ -u https://www.twitter.com/
-   ./program_name twitter/ -u https://www.twitter.com/ -r
+   ./multi-gallery-dl.py twitter/ -u https://www.twitter.com/
+   ./multi-gallery-dl.py twitter/ -u https://www.twitter.com/ -r
    ./multi-gallery-dl.py "pornhub/" --program "yt-dlp" -u "https://www.pornhub.com/model/" -r --options "-f best --restrict-filenames" --moveintodir
 
 ''',
@@ -28,7 +28,7 @@ parser.add_argument( '--options', help = 'extra options to pass to gallery-dl', 
 parser.add_argument( '--program', help = 'the actual program to run (defaults to "gallery-dl")', required = False, default = "gallery-dl" )
 
 parser.add_argument( '--urlpostfix', '--postfix', help = 'extra stuff to add to the end of the url', required = False, default = "")
-parser.add_argument( '-r', '--random', help = 'randomize order of directories (default=True)', required = False, action = 'store_true', default = False )
+parser.add_argument( '-r', '--random', help = 'randomize order of directories (default=False)', required = False, action = 'store_true', default = False )
 parser.add_argument( '-g', '--gallerydldir', help = 'directory to gallery-dl (defaults to current dir)', required = False, default = os.getcwd() )
 
 parser.add_argument( '--moveintodir', help = 'move into target directory before downloading (by default it will stay in the directory just above this one (which should usually be gallery-dl if you are running this with that program in mind and needed to function correctly)', required = False, action = 'store_true', default = False )
